@@ -11,13 +11,13 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
-const users_module_1 = require("./users/users.module");
 const ormconfig_1 = require("./ormconfig");
+const clients_module_1 = require("./clients/clients.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [users_module_1.UsersModule, typeorm_1.TypeOrmModule.forRoot(ormconfig_1.config)],
+        imports: [clients_module_1.ClientsModule, typeorm_1.TypeOrmModule.forRoot(ormconfig_1.config)],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
