@@ -12,7 +12,7 @@ async function bootstrap() {
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, config);
     swagger_1.SwaggerModule.setup('api', app, document, {
-        swaggerOptions: { defaultModelsExpandDepth: -1 },
+        swaggerOptions: { defaultModelsExpandDepth: -1, docExpansion: 'none' },
     });
     await app.listen(3000);
 }

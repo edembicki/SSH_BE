@@ -8,5 +8,4 @@ export declare class ClientsController {
     findAll(): Promise<import("./entities/clients.entity").Clients[]>;
     findOne(id: string): Promise<import("./entities/clients.entity").Clients>;
     update(id: string, updateClientsDto: UpdateClientsDto): Promise<import("typeorm").UpdateResult>;
-    remove(id: string): Promise<import("typeorm").DeleteResult>;
 }

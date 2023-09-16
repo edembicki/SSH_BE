@@ -34,9 +34,6 @@ let ClientsController = class ClientsController {
     update(id, updateClientsDto) {
         return this.clientsService.update(+id, updateClientsDto);
     }
-    remove(id) {
-        return this.clientsService.remove(+id);
-    }
 };
 __decorate([
     (0, common_1.Post)(),
@@ -70,15 +67,6 @@ __decorate([
     __metadata("design:paramtypes", [String, update_clients_dto_1.UpdateClientsDto]),
     __metadata("design:returntype", void 0)
 ], ClientsController.prototype, "update", null);
-__decorate([
-    (0, common_1.Delete)(':id'),
-    (0, swagger_1.ApiResponse)({ status: 201, description: 'The record has been successfully deleted.' }),
-    (0, swagger_1.ApiResponse)({ status: 403, description: 'Forbidden.' }),
-    __param(0, (0, common_1.Param)('id')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
-], ClientsController.prototype, "remove", null);
 ClientsController = __decorate([
     (0, swagger_1.ApiTags)('clients'),
     (0, common_1.Controller)('clients'),

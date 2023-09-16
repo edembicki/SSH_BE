@@ -13,11 +13,13 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const ormconfig_1 = require("./ormconfig");
 const clients_module_1 = require("./clients/clients.module");
+const companies_module_1 = require("./companies/companies.module");
+const stores_module_1 = require("./stores/stores.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [clients_module_1.ClientsModule, typeorm_1.TypeOrmModule.forRoot(ormconfig_1.config)],
+        imports: [clients_module_1.ClientsModule, companies_module_1.CompaniesModule, stores_module_1.StoresModule, typeorm_1.TypeOrmModule.forRoot(ormconfig_1.config)],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
